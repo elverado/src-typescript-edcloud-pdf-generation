@@ -1,0 +1,106 @@
+# Application PDF Generation Service
+
+This is a Node.js/TypeScript service that generates PDFs for Salesforce Education Cloud applications.
+
+## Project Context
+
+- **Purpose**: External PDF generation service to decouple PDF creation from Salesforce deployment cycles
+- **Technology**: Node.js, TypeScript, Express, Puppeteer, Handlebars
+- **Integration**: Salesforce API (OAuth for dev, Connected App for prod)
+- **Data Model**: Uses `IndividualApplication` with related `PersonEmployment` and `PersonEducation` records
+
+## Key Components
+
+- `src/salesforce/client.ts` - Salesforce API client (jsforce)
+- `src/pdf/generator.ts` - PDF generation using Puppeteer
+- `src/config/field-mappings.ts` - Dynamic field mapping system
+- `src/webhooks/salesforce.ts` - Webhook endpoints for Flow callouts
+- `config/field-mappings/` - JSON configuration files per school/program
+- `templates/` - Handlebars templates for PDF rendering
+
+## Development Guidelines
+
+1. **Field Mappings**: Add new fields in `config/field-mappings/` JSON files, not in code
+2. **Templates**: Modify Handlebars templates in `templates/` directory
+3. **Salesforce Objects**: 
+   - Main: `IndividualApplication`
+   - Related: `PersonEmployment`, `PersonEducation`
+4. **Multi-School Support**: Each school can have its own field mapping and template
+5. **No Hardcoded Fields**: All field selections come from configuration files
+
+## Testing
+
+**Primary Local Test Harness**: `npm run debug:pdf <ID>`
+
+This is the main testing tool for local development and should be used to verify functionality after any changes.
+
+### Quick Start
+```bash
+# Test with application name (e.g., IA-0000001566)
+# Note: Requires Chrome executable path for local development
+PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" npm run debug:pdf IA-0000001566
+
+# Test with Salesforce ID (18-char)
+PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" npm run debug:pdf 0iTHn000000YwRtMAK
+
+# On Linux, Chrome path is typically:
+# PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome" npm run debug:pdf IA-0000001566
+```
+
+### What It Does
+1. **Connects to Salesforce** - Uses CLI access token (if available) or `.env` credentials
+2. **Queries Application Data** - Fetches `IndividualApplication` with all related records:
+   - Contact information
+   - PersonEmployment records
+   - PersonEducation records (High School & College)
+   - Checklist_Item__c records
+   - LearningProgram ID for deep linking
+3. **Applies Field Mappings** - Automatically selects correct mapping based on school/program
+4. **Generates PDFs** - Creates both Complete and Lite versions
+5. **Uploads to Salesforce** - Uploads Complete Application PDF as ContentVersion
+6. **Provides Logging** - Detailed logs for debugging and verification
+
+### Test Configuration
+- **Staging Org**: Uses `staging` alias (configured via `sf org login`)
+- **Output Location**: `output/` directory (organized by template type)
+- **Sample Applications**: See `src/debug/test-pdf.ts` for predefined test cases
+
+### Verification
+After running, check:
+- PDF files in `output/Complete Application/` and `output/App Lite/`
+- Salesforce ContentVersion created (link provided in output)
+- Console logs for any warnings or errors
+- Field mapping selection (logged at start)
+
+### Local Development Setup
+For local testing, you need to specify the Chrome executable path:
+- **macOS**: `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`
+- **Linux**: `/usr/bin/google-chrome` or `/usr/bin/chromium-browser`
+- **Windows**: `C:\Program Files\Google\Chrome\Application\chrome.exe`
+
+You can set this in your shell profile or export it before running:
+```bash
+export PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+npm run debug:pdf IA-0000001566
+```
+
+## Environment
+
+- **Development**: OAuth username/password flow OR Salesforce CLI access token
+  - CLI token preferred (no `.env` needed): `sf org display --target-org staging`
+  - Falls back to `.env` if CLI not available
+- **Production**: Connected App with client_id/client_secret (AWS Secrets Manager)
+
+### Running Tests Without .env
+The debug script automatically uses Salesforce CLI if:
+1. `sf org login` has been run with `--alias staging`
+2. No `.env` file is present or `SF_ACCESS_TOKEN` is not set
+
+This makes local testing seamless without managing credentials.
+
+
+
+
+
+
+

@@ -1,0 +1,538 @@
+{
+  "schoolId": null,
+  "programId": null,
+  "schoolName": "Default School",
+  "programName": "Default Program",
+  "sections": [
+    {
+      "name": "Application Information",
+      "fields": [
+        {
+          "apiName": "Id",
+          "label": "Application ID"
+        },
+        {
+          "apiName": "Name",
+          "label": "Application Number"
+        },
+        {
+          "apiName": "Category",
+          "label": "Category"
+        },
+        {
+          "apiName": "Status",
+          "label": "Application Status"
+        },
+        {
+          "apiName": "Active__c",
+          "label": "Active"
+        },
+        {
+          "apiName": "SIS_Status_Field__c",
+          "label": "SIS Status Field"
+        },
+        {
+          "apiName": "Program_Name__c",
+          "label": "Program Name"
+        },
+        {
+          "apiName": "Specialty__c",
+          "label": "Specialty"
+        },
+        {
+          "apiName": "Term__c",
+          "label": "Term"
+        },
+        {
+          "apiName": "Location__c",
+          "label": "Location"
+        },
+        {
+          "apiName": "Campus_Location__c",
+          "label": "Campus Location"
+        },
+        {
+          "apiName": "Secondary_Location_Preference__c",
+          "label": "Secondary Location Preference"
+        },
+        {
+          "apiName": "Tertiary_Location_Preference__c",
+          "label": "Tertiary Location Preference"
+        },
+        {
+          "apiName": "Owner__c",
+          "label": "Owner"
+        },
+        {
+          "apiName": "Opportunity__c",
+          "label": "Opportunity"
+        },
+        {
+          "apiName": "Duplicate_Record__c",
+          "label": "Duplicate Record"
+        }
+      ]
+    },
+    {
+      "name": "Applicant Name",
+      "fields": [
+        {
+          "apiName": "Contact.Salutation",
+          "label": "Salutation"
+        },
+        {
+          "apiName": "Contact.FirstName",
+          "label": "Legal First Name"
+        },
+        {
+          "apiName": "Contact.MiddleName",
+          "label": "Middle Name"
+        },
+        {
+          "apiName": "Contact.LastName",
+          "label": "Legal Last Name"
+        },
+        {
+          "apiName": "Contact.Preferred_First_Name__c",
+          "label": "Preferred First Name"
+        },
+        {
+          "apiName": "Contact.Former_Last_Name__c",
+          "label": "Former Last Name"
+        }
+      ]
+    },
+    {
+      "name": "Contact Information",
+      "fields": [
+        {
+          "apiName": "Contact.Email",
+          "label": "Email"
+        },
+        {
+          "apiName": "Contact.MobilePhone",
+          "label": "Mobile Phone"
+        },
+        {
+          "apiName": "Contact.HomePhone",
+          "label": "Home Phone"
+        },
+        {
+          "apiName": "Contact.OtherPhone",
+          "label": "Work Phone"
+        },
+        {
+          "apiName": "Contact.Preferred_Phone_Type__c",
+          "label": "Preferred Phone Type"
+        },
+        {
+          "apiName": "Contact.Secondary_Preferred_Phone_Type__c",
+          "label": "Secondary Preferred Phone Type"
+        }
+      ]
+    },
+    {
+      "name": "Physical Address",
+      "fields": [
+        {
+          "apiName": "Contact.OtherStreet",
+          "label": "Street"
+        },
+        {
+          "apiName": "Contact.OtherCity",
+          "label": "City"
+        },
+        {
+          "apiName": "Contact.OtherState",
+          "label": "State"
+        },
+        {
+          "apiName": "Contact.OtherPostalCode",
+          "label": "Zip/Postal Code"
+        },
+        {
+          "apiName": "Contact.OtherCountry",
+          "label": "Country"
+        }
+      ]
+    },
+    {
+      "name": "Mailing Address",
+      "fields": [
+        {
+          "apiName": "Contact.MailingStreet",
+          "label": "Street"
+        },
+        {
+          "apiName": "Contact.MailingCity",
+          "label": "City"
+        },
+        {
+          "apiName": "Contact.MailingState",
+          "label": "State"
+        },
+        {
+          "apiName": "Contact.MailingPostalCode",
+          "label": "Zip/Postal Code"
+        },
+        {
+          "apiName": "Contact.MailingCountry",
+          "label": "Country"
+        }
+      ]
+    },
+    {
+      "name": "Military Status",
+      "fields": [
+        {
+          "apiName": "Contact.Military_Status__c",
+          "label": "Military Status/Affiliation"
+        },
+        {
+          "apiName": "Has_Previously_Applied__c",
+          "label": "Has Previously Applied"
+        }
+      ]
+    },
+    {
+      "name": "Compliance Information",
+      "fields": [
+        {
+          "apiName": "Contact.Citizenship_Status__c",
+          "label": "Citizenship Status"
+        },
+        {
+          "apiName": "Contact.Visa_Needed_to_Study__c",
+          "label": "Do you need a U.S. visa to study?"
+        },
+        {
+          "apiName": "Contact.Own_a_US_Visa__c",
+          "label": "Do you have a U.S. visa?"
+        },
+        {
+          "apiName": "Contact.Reported_Visa_Type__c",
+          "label": "Visa Type"
+        },
+        {
+          "apiName": "Contact.Enrolled_in_other_U_S_Institution__c",
+          "label": "Currently enrolled at another U.S. institution?"
+        },
+        {
+          "apiName": "Contact.SSN__c",
+          "label": "Social Security Number"
+        },
+        {
+          "apiName": "Contact.Birthdate",
+          "label": "Date of Birth",
+          "format": "date"
+        },
+        {
+          "apiName": "Contact.Birth_Country__c",
+          "label": "Country of Birth"
+        },
+        {
+          "apiName": "Contact.Birth_City__c",
+          "label": "City of Birth"
+        },
+        {
+          "apiName": "Contact.Birth_State__c",
+          "label": "State of Birth"
+        },
+        {
+          "apiName": "Contact.Sex__c",
+          "label": "Sex (Legal)"
+        },
+        {
+          "apiName": "Contact.GenderIdentity",
+          "label": "Gender Identity"
+        },
+        {
+          "apiName": "Contact.Pronouns",
+          "label": "Pronouns"
+        },
+        {
+          "apiName": "Contact.Sexual_Orientation__c",
+          "label": "Sexual Orientation"
+        },
+        {
+          "apiName": "Contact.Ethnicity__c",
+          "label": "Ethnicity"
+        },
+        {
+          "apiName": "Contact.Race__c",
+          "label": "Race"
+        },
+        {
+          "apiName": "Contact.Is_English_Primary_Language__c",
+          "label": "Is English your primary language?"
+        },
+        {
+          "apiName": "International_Student__c",
+          "label": "International Student"
+        }
+      ]
+    },
+    {
+      "name": "Application Dates",
+      "fields": [
+        {
+          "apiName": "AppliedDate",
+          "label": "Applied Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Application_Submitted_Date__c",
+          "label": "Application Submitted Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Date_Application_Reviewable__c",
+          "label": "Date Application Reviewable",
+          "format": "date"
+        },
+        {
+          "apiName": "Date_Application_Accepted__c",
+          "label": "Date Application Accepted",
+          "format": "date"
+        },
+        {
+          "apiName": "Date_Future_Start_Deposited__c",
+          "label": "Date Future Start Deposited",
+          "format": "date"
+        },
+        {
+          "apiName": "Date_Waitlisted__c",
+          "label": "Date Waitlisted",
+          "format": "date"
+        }
+      ]
+    },
+    {
+      "name": "Admissions Status",
+      "fields": [
+        {
+          "apiName": "Admissions_Status__c",
+          "label": "Admissions Status"
+        },
+        {
+          "apiName": "Decision__c",
+          "label": "Decision"
+        },
+        {
+          "apiName": "Applicant_Decision__c",
+          "label": "Applicant Decision"
+        },
+        {
+          "apiName": "Decision_Release_Date__c",
+          "label": "Decision Release Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Admit_Contingencies__c",
+          "label": "Admit Contingencies"
+        },
+        {
+          "apiName": "File_Closed_Reason__c",
+          "label": "File Closed Reason"
+        }
+      ]
+    },
+    {
+      "name": "Interview Information",
+      "fields": [
+        {
+          "apiName": "Interview_Status__c",
+          "label": "Interview Status"
+        },
+        {
+          "apiName": "Interview_Date__c",
+          "label": "Interview Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Interview_Invite_Date__c",
+          "label": "Interview Invite Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Interview_Invite_Sent_Date__c",
+          "label": "Interview Invite Sent Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Invite_to_Secondary_Application__c",
+          "label": "Invite to Secondary Application"
+        }
+      ]
+    },
+    {
+      "name": "Academic Information",
+      "fields": [
+        {
+          "apiName": "Highest_HS_GPA__c",
+          "label": "Highest High School GPA"
+        },
+        {
+          "apiName": "Highest_College_GPA__c",
+          "label": "Highest College GPA"
+        },
+        {
+          "apiName": "Cumulative_GPA__c",
+          "label": "Cumulative GPA"
+        },
+        {
+          "apiName": "Verified_GPA_Blank__c",
+          "label": "Verified GPA"
+        },
+        {
+          "apiName": "First_Generation_Student__c",
+          "label": "First Generation Student"
+        },
+        {
+          "apiName": "Seeking_Transfer_Credit__c",
+          "label": "Seeking Transfer Credit"
+        },
+        {
+          "apiName": "Enrolled_in_AA_T_or_AS_T_degree_transfer__c",
+          "label": "Enrolled in AA-T or AS-T degree transfer"
+        },
+        {
+          "apiName": "Initiating_Articulation_Agreement__c",
+          "label": "Initiating Articulation Agreement"
+        },
+        {
+          "apiName": "Graduate_Level_Program__c",
+          "label": "Graduate Level Program"
+        },
+        {
+          "apiName": "Full_Part_Time__c",
+          "label": "Full/Part Time"
+        }
+      ]
+    },
+    {
+      "name": "Financial Information",
+      "fields": [
+        {
+          "apiName": "Scholarship__c",
+          "label": "Scholarship"
+        },
+        {
+          "apiName": "Scholarship_Amount__c",
+          "label": "Scholarship Amount",
+          "format": "currency"
+        },
+        {
+          "apiName": "Scholarship_Message__c",
+          "label": "Scholarship Message"
+        },
+        {
+          "apiName": "Applying_for_Financial_Aid__c",
+          "label": "Applying for Financial Aid"
+        },
+        {
+          "apiName": "Deposit_Amount__c",
+          "label": "Deposit Amount",
+          "format": "currency"
+        },
+        {
+          "apiName": "Deposit_Due_Date__c",
+          "label": "Deposit Due Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Deposit_Date_Passed__c",
+          "label": "Deposit Date Passed"
+        }
+      ]
+    },
+    {
+      "name": "Additional Information",
+      "fields": [
+        {
+          "apiName": "How_did_you_hear_about_us__c",
+          "label": "How did you hear about us?"
+        },
+        {
+          "apiName": "Character_Statement_Needed__c",
+          "label": "Character Statement Needed"
+        },
+        {
+          "apiName": "Conviction__c",
+          "label": "Conviction"
+        },
+        {
+          "apiName": "Academic_Dismissal__c",
+          "label": "Academic Dismissal"
+        },
+        {
+          "apiName": "Academic_Sanction__c",
+          "label": "Academic Sanction"
+        },
+        {
+          "apiName": "Criminal_Charges_or_Convictions__c",
+          "label": "Criminal Charges or Convictions"
+        }
+      ]
+    },
+    {
+      "name": "Employment History",
+      "fields": [
+        {
+          "apiName": "relatedRecords.Employment[0].Name",
+          "label": "Employer Name"
+        },
+        {
+          "apiName": "relatedRecords.Employment[0].Position",
+          "label": "Position"
+        },
+        {
+          "apiName": "relatedRecords.Employment[0].Sector__c",
+          "label": "Sector"
+        }
+      ]
+    },
+    {
+      "name": "High School Education",
+      "fields": [
+        {
+          "apiName": "relatedRecords.HighSchool[0].Name",
+          "label": "School Name"
+        },
+        {
+          "apiName": "relatedRecords.HighSchool[0].EducationLevel",
+          "label": "Education Level"
+        },
+        {
+          "apiName": "relatedRecords.HighSchool[0].GraduationDate",
+          "label": "Graduation Date",
+          "format": "date"
+        }
+      ]
+    },
+    {
+      "name": "College Education",
+      "fields": [
+        {
+          "apiName": "relatedRecords.College[0].Name",
+          "label": "Institution Name"
+        },
+        {
+          "apiName": "relatedRecords.College[0].EducationLevel",
+          "label": "Degree Level"
+        },
+        {
+          "apiName": "relatedRecords.College[0].GraduationDate",
+          "label": "Graduation Date",
+          "format": "date"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+

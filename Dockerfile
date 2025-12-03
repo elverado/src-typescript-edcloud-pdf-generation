@@ -2,6 +2,9 @@
 # PDF generation integration service for Salesforce Education Cloud (EdCloud)
 # This service is solely dedicated to PDF generation integration with EdCloud
 # Based on AWS Lambda Node.js 24 base image with Chromium for Puppeteer
+#
+# Copyright (c) 2025 The Community Solution
+# https://www.tcsedsystem.edu/
 
 FROM public.ecr.aws/lambda/nodejs:24 AS builder
 
@@ -75,8 +78,9 @@ ENV NODE_ENV=production
 # Application metadata labels
 LABEL org.opencontainers.image.title="PDF Generation Integration for Salesforce Education Cloud"
 LABEL org.opencontainers.image.description="PDF generation integration service for Salesforce Education Cloud (EdCloud) - dedicated service for application PDF generation"
-LABEL org.opencontainers.image.vendor="Community Solution"
-LABEL org.opencontainers.image.authors="Community Solution"
+LABEL org.opencontainers.image.vendor="The Community Solution"
+LABEL org.opencontainers.image.authors="The Community Solution"
+LABEL org.opencontainers.image.url="https://www.tcsedsystem.edu/"
 LABEL application.type="pdf-generation-integration"
 LABEL application.purpose="edcloud-pdf-generation"
 LABEL application.platform="salesforce-education-cloud"
@@ -84,3 +88,9 @@ LABEL application.integration="edcloud"
 
 # Lambda handler - points to the compiled index.js
 CMD ["dist/index.handler"]
+
+
+
+
+
+

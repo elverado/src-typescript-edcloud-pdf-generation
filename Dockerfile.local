@@ -1,6 +1,9 @@
 # Local Testing Dockerfile for Mac
 # PDF generation integration service for Salesforce Education Cloud (EdCloud)
 # Simplified version without Lambda-specific setup for easier local testing
+# 
+# Copyright (c) 2025 The Community Solution
+# https://www.tcsedsystem.edu/
 
 FROM node:24-slim
 
@@ -61,3 +64,5 @@ EXPOSE 3000
 
 # Run the application (not Lambda handler)
 CMD ["node", "dist/index.js"]
+
+

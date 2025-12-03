@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build output (will be built in container)
+dist/
+
+# Development files
+.env
+.env.*
+*.log
+log/
+
+# Output files
+output/
+*.pdf
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test files
+*.test.ts
+*.spec.ts
+__tests__/
+coverage/
+.nyc_output/
+
+# Debug files
+src/debug/
+pdf_fields*.json
+
+# Documentation (not needed in container)
+*.md
+!README.md
+
+
+
+
+
+

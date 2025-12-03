@@ -1,0 +1,81 @@
+{
+  "extends": "default",
+  "schoolName": "IllinoisCOM",
+  "programName": "Doctor of Osteopathic Medicine",
+  "overrideSections": [
+    {
+      "name": "Interview Information",
+      "fields": [
+        {
+          "apiName": "Interview_Status__c",
+          "label": "Interview Status"
+        },
+        {
+          "apiName": "Interview_Date__c",
+          "label": "Interview Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Interview_Invite_Date__c",
+          "label": "Interview Invite Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Interview_Invite_Sent_Date__c",
+          "label": "Interview Invite Sent Date",
+          "format": "date"
+        },
+        {
+          "apiName": "Invite_to_Secondary_Application__c",
+          "label": "Invite to Secondary Application"
+        },
+        {
+          "apiName": "Waitlist_Activated__c",
+          "label": "Waitlist Activated"
+        },
+        {
+          "apiName": "Date_Waitlist_Activated__c",
+          "label": "Date Waitlist Activated",
+          "format": "date"
+        }
+      ]
+    },
+    {
+      "name": "Additional Information",
+      "fields": [
+        {
+          "apiName": "International_Student__c",
+          "label": "International Student"
+        },
+        {
+          "apiName": "Has_Previously_Applied__c",
+          "label": "Has Previously Applied"
+        },
+        {
+          "apiName": "How_did_you_hear_about_us__c",
+          "label": "How did you hear about us?"
+        },
+        {
+          "apiName": "Character_Statement_Needed__c",
+          "label": "Character Statement Needed"
+        },
+        {
+          "apiName": "Manually_Trigger_Checklist_Items__c",
+          "label": "Manually Trigger Checklist Items"
+        },
+        {
+          "apiName": "Conviction__c",
+          "label": "Conviction"
+        },
+        {
+          "apiName": "Acknowledge_Statement_Signature__c",
+          "label": "Acknowledge Statement Signature"
+        },
+        {
+          "apiName": "ProgramTermApplnTimeline__c",
+          "label": "Program Term Application Timeline"
+        }
+      ]
+    }
+  ]
+}

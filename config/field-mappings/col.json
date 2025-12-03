@@ -1,0 +1,40 @@
+{
+  "extends": "default",
+  "schoolName": "The Colleges of Law",
+  "programName": "Juris Doctor",
+  "overrideSections": [
+    {
+      "name": "Additional Information",
+      "fields": [
+        {
+          "apiName": "International_Student__c",
+          "label": "International Student"
+        },
+        {
+          "apiName": "Has_Previously_Applied__c",
+          "label": "Has Previously Applied"
+        },
+        {
+          "apiName": "How_did_you_hear_about_us__c",
+          "label": "How did you hear about us?"
+        },
+        {
+          "apiName": "Character_Statement_Needed__c",
+          "label": "Character Statement Needed"
+        },
+        {
+          "apiName": "Manually_Trigger_Checklist_Items__c",
+          "label": "Manually Trigger Checklist Items"
+        },
+        {
+          "apiName": "Conviction__c",
+          "label": "Conviction"
+        },
+        {
+          "apiName": "Acknowledge_Statement_Signature__c",
+          "label": "Acknowledge Statement Signature"
+        }
+      ]
+    }
+  ]
+}
