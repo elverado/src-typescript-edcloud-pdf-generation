@@ -1,16 +1,29 @@
-# PDF Generation Integration for Salesforce Education Cloud (EdCloud)
+# PDF Generation Integration for Salesforce Education Cloud (EdCloud) 📄
 
-PDF generation integration service for Salesforce Education Cloud (EdCloud). This service is solely dedicated to PDF generation integration with EdCloud, providing external PDF generation capabilities for Education Cloud applications.
+![Node.js](https://img.shields.io/badge/Node.js-24.x-green?logo=node.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)
+![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-orange?logo=aws-lambda)
+![Salesforce](https://img.shields.io/badge/Salesforce-Education_Cloud-00A1E0?logo=salesforce)
+![Puppeteer](https://img.shields.io/badge/Puppeteer-PDF_Generation-40B5A4?logo=puppeteer)
+![Handlebars](https://img.shields.io/badge/Handlebars-Templates-FF6A00?logo=handlebars)
+![Express](https://img.shields.io/badge/Express-API-000000?logo=express)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=github-actions)
 
-## Overview
+A serverless PDF generation service that decouples document creation from Salesforce deployment cycles. Generates professional PDF documents for Education Cloud `IndividualApplication` records with dynamic field mapping, multi-school support, and template-based rendering.
 
-This service generates PDF documents for Salesforce Education Cloud `IndividualApplication` records. It decouples PDF generation from Salesforce, enabling:
+## Executive Summary
 
-- ✅ Faster development cycles (no Apex deployments for template changes)
-- ✅ Dynamic field mapping (JSON configuration, no hardcoded fields)
-- ✅ Multi-school/program support (configurable per school)
-- ✅ Template-based PDF generation (Handlebars)
-- ✅ Scalable architecture (AWS Lambda deployment)
+This service provides **external PDF generation capabilities** for Salesforce Education Cloud, eliminating the need for Apex deployments when updating templates or field configurations. The service:
+
+- **Generates PDFs on-demand** via Salesforce Flow webhooks for `IndividualApplication` records
+- **Supports multiple schools/programs** through JSON-based field mapping inheritance
+- **Renders two PDF variants**: Complete Application (full details) and App Lite (essential fields)
+- **Deploys as AWS Lambda** container for serverless, scalable execution
+- **Integrates seamlessly** with Salesforce via OAuth and automatic token refresh
+- **Enables rapid iteration** on templates and field mappings without Salesforce deployments
+
+**Key Benefits**: Faster development cycles, zero Salesforce deployment overhead for template changes, and centralized PDF generation logic that scales across all Education Cloud schools.
 
 ## Architecture
 
